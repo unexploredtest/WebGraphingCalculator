@@ -1,0 +1,24 @@
+body {
+
+  background-color: #D4EB7E;
+
+}
+
+h1 {
+
+  padding: 2.5px;
+  color: #8FE000;
+  background-color: #78948B;
+  margin-left: 1.5em;
+  margin-right: 17em;
+
+}
+
+.CalculatorBase {
+
+  background-color: #C1E0DB;
+  margin-left: 6em;
+  margin-right: 6em;
+  margin-top: 10em;
+
+}
