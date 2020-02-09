@@ -5,6 +5,6 @@ class Graph(models.Model):
 
     equation = models.CharField(max_length=30)
     description = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='graphs/')
 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
