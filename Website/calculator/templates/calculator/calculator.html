@@ -11,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Graphing Calculator </title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'calculator/style.css' %}"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'calculator/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
     <!--<script>
       alert("Thank you for passing by! Be aware, that this is just a work-in-progress version of our app. You can check our code on https://github.com/aliPMPAINT/WebGraphingCalculator");
     </script>-->
-    <script type="text/javascript" src="../static/calculator/script.js"></script>
+    <script type="text/javascript" src="{% static 'calculator/script.js' %}"></script>
   </head>
 
   <body>
@@ -33,7 +33,7 @@
         <form>
           <input type="text" width="15" id="equation"/>
           <input type="submit" class="submitButton" value="Calculate"></input>
-        </form> 
+        </form>
         <button onclick="Add('+')">+</button>
         <button onclick="Add('-')">-</button>
         <button onclick="Add('*')">*</button>
@@ -44,7 +44,7 @@
       <div class="graph">
         <p>Your function will be displayed here...</p>
       </div>
-        
+
     </div>
 
     <footer>
