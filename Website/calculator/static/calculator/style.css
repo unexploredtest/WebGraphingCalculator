@@ -43,6 +43,19 @@ header{
   margin-bottom: 20px;
 }
 
+article button {
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: #1B2B40;
+  color: #F8F8FF;
+}
+article button:hover {
+  box-shadow: 3px 3px #F28705;
+
+}
+
 .graph {
   display: inline-block;
   grid-row-start: 2;
