@@ -1,24 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
 
-  background-color: #D4EB7E;
-
+  background-color: #1B2B40;
+  color: rgb(220,220,220);
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: grid;
+  grid-template-columns: 30vw 70vw;
+  grid-template-rows: 5vh 90vh 5vh;
 }
 
-h1 {
-
-  padding: 2.5px;
-  color: #8FE000;
-  background-color: #78948B;
-  margin-left: 1.5em;
-  margin-right: 17em;
-
+header{
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 10px 0px 0px 5px;
 }
-
 .CalculatorBase {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: #F8F8FF;
 
-  background-color: #C1E0DB;
-  margin-left: 6em;
-  margin-right: 6em;
-  margin-top: 10em;
+}
 
+.CalculatorBase article{
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  color: #3F3F3F;
+  padding: 20px;
+}
+
+.CalculatorBase article h1{
+  color: #F28705;
+  margin-bottom: 20px;
+}
+
+.graph {
+  display: inline-block;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: #F28705;
+}
+
+.submitButton {
+  background-color: #1B2B40;
+  color: #F8F8FF;
+  border: none;
+  padding: 5px;
+  font-family: inherit;
+}
+
+.submitButton:hover {
+  background-color: #F28705;
+}
+
+footer{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  font-size: 18px;
+  padding: 5px;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(220,220,220);
+}
+address p{
+  display: inline-block;
+}
+address:first-child{
+  color: #90D923;
 }
