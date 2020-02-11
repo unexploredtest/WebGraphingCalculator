@@ -30,8 +30,10 @@
 
       <article>
         <h1>This shall be an amazing calculator</h1>
-        <form>
-          <input type="text" width="15" id="equation"/>
+        <form method='post'>
+          {% csrf_token %}
+          {{ form }}
+          <!-- <p> {{ equation }} </p> -->  <!-- Used to see if the form worked or not -->
           <input type="submit" class="submitButton" value="Calculate"></input>
         </form>
 
@@ -58,6 +60,7 @@
         <button onclick="Add('sqrt(')">sqrt</button>
         <button onclick="Add('x')">x</button>
         <button onclick="Add('+')">+</button>
+        <button onclick="Add('.')">.</button>
 
 
       </article>
