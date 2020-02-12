@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .forms import TextEquation
+from .traph import grapher                  # The function that will grapg the equation
 
 
 def calculator(request):
@@ -10,7 +11,7 @@ def calculator(request):
         form = TextEquation(request.POST)
         if form.is_valid():
             equation = form.cleaned_data.get('equation') # Getting the equation that the user had written
-            # Here would go the function that will graph the equation
+            grapher.graph_it(equation)
 
     else:
         form = TextEquation()
