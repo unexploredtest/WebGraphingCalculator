@@ -1,6 +1,6 @@
 import os                     # needed to specify where the pictures should go
 from . import file_numberer   # Used to name the images of plots [graph(number).png]
-
+from shutil import copy       # to get copied to static/calculator/graphs
 # getting the path (if you found a better way, tell me)
 path = os.getcwd()
 os.chdir(path+'//calculator//traph')
@@ -23,3 +23,6 @@ def graph_it(equation):
     with open('file_numberer.py', 'w') as numberer:                       # Saving the future number
         text = f"def get_number():\n    number = {file_number}\n    return number"
         numberer.write(text)
+
+    os.chdir(path+'//calculator')                   # Changing the placement
+    copy(f'traph/graphs/graph{file_number-1}.png', 'static/calculator/graphs')
