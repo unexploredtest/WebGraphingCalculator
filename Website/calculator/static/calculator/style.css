@@ -26,12 +26,13 @@ header{
   grid-row-end: 3;
   grid-column-start: 1;
   grid-column-end: 3;
+  display: flex;
+
   background-color: #F8F8FF;
 
 }
 
 .CalculatorBase article{
-  display: inline-block;
   width: 30%;
   height: 100%;
   color: #3F3F3F;
@@ -57,12 +58,11 @@ article button:hover {
 }
 
 .graph {
-  display: inline-block;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
   color: #F28705;
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
 }
 
 .submitButton {

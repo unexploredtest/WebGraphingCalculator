@@ -1,59 +1,58 @@
-{% load static %}
+{% extends 'calculator/base.html' %}
 
-<!doctype html>
-
-<html>
-
-  <head lang="eng">
-    <meta charset="utf-8">
-    <meta name="description" content="An calculator providing support for variables. It enables you to display your function - and change it's look depending on the values of your variables." >
-    <meta name="keywords" content="calculator, calculus, dividing, add, multiple, graphs, funtions, variables, graphical">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Graphing Calculator </title>
-
-    <link rel="stylesheet" type="text/css" href="{% static 'calculator/style.css' %}"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet"> 
-    <!--<script>
-      alert("Thank you for passing by! Be aware, that this is just a work-in-progress version of our app. You can check our code on https://github.com/aliPMPAINT/WebGraphingCalculator");
-    </script>-->
-    <script type="text/javascript" src="../static/calculator/script.js"></script>
-  </head>
-
-  <body>
-    <header>
-      <section>
-        <h1>.Calculator</h1>
-      </section>
-    </header>
+{% block content %}
 
     <div class="CalculatorBase">
 
       <article>
         <h1>This shall be an amazing calculator</h1>
-        <form>
-          <input type="text" width="15" id="equation"/>
+        <form method='post'>
+          {% csrf_token %}
+          {{ form }}
+          <!-- <p> {{ equation }} </p> -->  <!-- Used to see if the form worked or not -->
           <input type="submit" class="submitButton" value="Calculate"></input>
-        </form> 
-        <button onclick="Add('+')">+</button>
-        <button onclick="Add('-')">-</button>
-        <button onclick="Add('*')">*</button>
+        </form>
+
+
+
+
+         <br>
+        <button onclick="Add('7')">7</button>
+        <button onclick="Add('8')">8</button>
+        <button onclick="Add('9')">9</button>
         <button onclick="Add('/')">/</button>
-        <button onclick="Clear()">C</button>
+        <button onclick="Clear()">C</button> <br>
+        <button onclick="Add('4')">4</button>
+        <button onclick="Add('5')">5</button>
+        <button onclick="Add('6')">6</button>
+        <button onclick="Add('*')">*</button>
+        <button onclick="Add('(')">(</button> <br>
+        <button onclick="Add('1')">1</button>
+        <button onclick="Add('2')">2</button>
+        <button onclick="Add('3')">3</button>
+        <button onclick="Add('-')">-</button>
+        <button onclick="Add(')')">)</button> <br>
+        <button onclick="Add('0')">0</button>
+        <button onclick="Add('sqrt(')">sqrt</button>
+        <button onclick="Add('x')">x</button>
+        <button onclick="Add('+')">+</button>
+        <button onclick="Add('.')">.</button>
+
+
       </article>
 
       <div class="graph">
-        <p>Your function will be displayed here...</p>
+
+        <div id="visualization">
+
+          <img src='/static/calculator/graphs/graph{{ image_number }}.png' alt='Your function will be displayed here'>
+
+        </div>
+        <p id="functionDisplay"></p>
+
+
       </div>
-        
+
     </div>
 
-    <footer>
-      <address>
-        Creators: <p><a href="https://github.com/aliPMPAINT">aliPMPAINT </a></p>
-                  <p><a href="https://github.com/untitledtotitled">untitledtotitled </a></p>
-                  <p><a href="https://github.com/Jan00sh">Jan00sh</a></p> <br>
-      </address>
-    </footer>
-  </body>
-
-</html>
+{% endblock %}
