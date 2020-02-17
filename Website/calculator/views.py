@@ -22,3 +22,8 @@ def calculator(request):
 
 
     return render(request, 'calculator/calculator.html', {'form': form, "equation": equation, 'image_number': image_number})
+
+
+def login(request):
+
+    return render(request, 'calculator/login.html')

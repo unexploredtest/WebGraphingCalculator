@@ -1,30 +1,6 @@
-{% load static %}
+{% extends 'calculator/base.html' %}
 
-<!doctype html>
-
-<html>
-
-  <head lang="eng">
-    <meta charset="utf-8">
-    <meta name="description" content="An calculator providing support for variables. It enables you to display your function - and change it's look depending on the values of your variables." >
-    <meta name="keywords" content="calculator, calculus, dividing, add, multiple, graphs, funtions, variables, graphical">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Graphing Calculator </title>
-
-    <link rel="stylesheet" type="text/css" href="{% static 'calculator/style.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
-    <!--<script>
-      alert("Thank you for passing by! Be aware, that this is just a work-in-progress version of our app. You can check our code on https://github.com/aliPMPAINT/WebGraphingCalculator");
-    </script>-->
-    <script type="text/javascript" src="{% static 'calculator/script.js' %}"></script>
-  </head>
-
-  <body>
-    <header>
-      <section>
-        <h1>.Calculator</h1>
-      </section>
-    </header>
+{% block content %}
 
     <div class="CalculatorBase">
 
@@ -79,13 +55,4 @@
 
     </div>
 
-    <footer>
-      <address>
-        Creators: <p><a style='color: rgb(220, 220, 220);' href="https://github.com/aliPMPAINT">aliPMPAINT </a></p>
-                  <p><a style='color: rgb(220, 220, 220);' href="https://github.com/untitledtotitled">untitledtotitled </a></p>
-                  <p><a style='color: rgb(220, 220, 220);' href="https://github.com/Jan00sh">Jan00sh</a></p> <br>
-      </address>
-    </footer>
-  </body>
-
-</html>
+{% endblock %}
