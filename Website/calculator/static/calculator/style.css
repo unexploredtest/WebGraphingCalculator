@@ -17,15 +17,6 @@
   left: 50%;
   transform: translate(-50%, -50%); 
 }
-.login_screen button {
-  border: none;
-  padding: 3px 10px 3px 10px ;
-
-}
-.login_screen button:hover {
-  background-color: red;
-  color: white;
-}
 
 body {
 
