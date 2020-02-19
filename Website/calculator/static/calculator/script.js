@@ -10,3 +10,12 @@ function Clear() {
     equation.value = "";
     functionDisplay.innerHTML = "";
 }
+function loginPage(y){
+    let element = document.getElementById("login");
+    if(y == 'o'){
+        element.style.visibility = "visible";
+    }
+    else{
+        element.style.visibility = "hidden";        
+    }
+}

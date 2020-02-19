@@ -3,6 +3,21 @@
   padding: 0px;
 }
 
+#login {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background-color: #1B2B40;
+}
+.login_screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
 body {
 
   background-color: #1B2B40;
@@ -10,7 +25,7 @@ body {
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: grid;
   grid-template-columns: 30vw 70vw;
-  grid-template-rows: 5vh 90vh 5vh;
+  grid-template-rows: 7vh 88vh 5vh;
 }
 
 header{
@@ -20,6 +35,18 @@ header{
   grid-row-start: 1;
   grid-row-end: 2;
   padding: 10px 0px 0px 5px;
+}
+header button, h1 {
+  display: inline-block;
+  margin-left: 20px;
+}
+header button{
+  border: none;
+  padding: 3px 10px 3px 10px;
+}
+header button:hover{
+  background-color: red;
+  color: white;
 }
 .CalculatorBase {
   grid-row-start: 2;
