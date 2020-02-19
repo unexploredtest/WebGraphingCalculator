@@ -9,7 +9,7 @@
   height: 100vh;
   position: fixed;
   z-index: 10;
-  background-color: #1B2B40;
+  background-color: rgba(27, 43, 64, 0.5);
 }
 .login_screen {
   position: absolute;
