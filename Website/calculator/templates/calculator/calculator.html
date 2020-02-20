@@ -5,6 +5,11 @@
     <div class="CalculatorBase">
 
       <article>
+        {% if messages %}
+          {% for message in messages %}
+            <h2> {{message}} </h2>
+          {% endfor %}
+        {% endif %}
         <h1>This shall be an amazing calculator</h1>
         <form method='post'>
           {% csrf_token %}

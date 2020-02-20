@@ -1,7 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import TextEquation
 from .traph import grapher, file_numberer    # The functions that will graph the equation and tell us the number
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
 
 
 def calculator(request):
@@ -26,4 +28,17 @@ def calculator(request):
 
 def register(request):
 
-    return render(request, 'calculator/register.html')
+    if request.method == 'POST':
+        register_form = UserCreationForm(request.POST)
+
+        if register_form.is_valid():
+            register_form.save()                                                # Saving the user
+            username = register_form.cleaned_data.get('username')
+            messages.success(request, f'{username} has been succesfuly created! Log in to continue.')
+            return redirect('GraphingCalculator')                                
+
+
+    else:
+        register_form = UserCreationForm()
+
+    return render(request, 'calculator/register.html', {'register_form': register_form})
