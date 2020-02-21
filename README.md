@@ -1,6 +1,6 @@
 ![WebGraphingCalculator](https://i.ibb.co/c13Z9Hj/github.png)
 # WebGraphingCalculator
-Welcome to the best web-based graphing calculator in the whole multiverse! Start graphing you function to day!
+Welcome to the best web-based graphing calculator in the whole multiverse! Start graphing your function today!
 
 ## Description
 This is a web-based graphing calculator that gets the input function from the user and sends it to the server and graphs the function using matplotlib and output it as a .png file then displays it in the webpage.
