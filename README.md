@@ -9,8 +9,8 @@ This is a web-based graphing calculator that gets the input function from the us
 Django, numpy, matplotlib, Pillow
 
 ## How to use:
-In the '/Website' directory, type in the terminal:
-'python manage.py runserver'
+In the `/Website` directory, type in the terminal:
+`python manage.py runserver`
 
 ## Made by:
 [Jan00sh](https://github.com/Jan00sh) and [aliPMPAINT](https://github.com/aliPMPAINT)
