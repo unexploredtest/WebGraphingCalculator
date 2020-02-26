@@ -13,7 +13,7 @@ def graph_it(equation):
     # Sorry for the complexity and mess, happen you found a better way, I'll be grateful if you tell me
 
     with open('plot.py', 'w') as ploter:
-        text = f"import matplotlib.pyplot as plt \nfrom numpy import * \nplt.style.use('seaborn') \nx = linspace(1, 5, 100) \ny = {equation} \nplt.plot(x, y) \nfile_name = 'graphs/graph{file_number}.png' \nplt.savefig(file_name)"
+        text = f"import matplotlib.pyplot as plt \nfrom numpy import * \nplt.style.use('seaborn') \nx = linspace(0, 5, 100) \ny = {equation} \nplt.plot(x, y) \nplt.axhline(y=0, color='black')\nplt.axvline(x=0, color='black') \nfile_name = 'graphs/graph{file_number}.png' \nplt.savefig(file_name)"
         ploter.write(text)
 
     from . import plot                   # Running the plot.py
