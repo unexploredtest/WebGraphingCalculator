@@ -14,7 +14,14 @@ def calculator(request):
         if form.is_valid():
             equation = form.cleaned_data.get('equation') # Getting the equation that the user had written
             image_number = file_numberer.get_number()    # Getting the number
-            grapher.graph_it(equation)                   # Graphing the function
+
+        if ("x" in equation) and ("exit" not in equation) and ("quit" not in equation):         # Making sure no one wants to put mischievous functions ;)
+            try:                                          # Making sure the funcion is correct
+                grapher.graph_it(equation)                # Graphing the function
+            except Exception:
+                image_number += 1                         # As the graph doesn't exist, the alt message of <img> will appear
+        else:
+            image_number += 1                             # As the graph doesn't exist, the alt message of <img> will appear
 
     else:
         form = TextEquation()
@@ -35,7 +42,7 @@ def register(request):
             register_form.save()                                                # Saving the user
             username = register_form.cleaned_data.get('username')
             messages.success(request, f'{username} has been succesfuly created! Log in to continue.')
-            return redirect('GraphingCalculator')                                
+            return redirect('GraphingCalculator')
 
 
     else:
