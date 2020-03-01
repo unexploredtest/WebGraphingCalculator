@@ -125,3 +125,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     STATIC_PATH,
 )
+
+LOGIN_REDIRECT_URL = 'GraphingCalculator'
+
+LOGIN_URL = 'login'

@@ -1,0 +1,28 @@
+{% extends 'calculator/base.html' %}
+
+{% block content %}
+
+
+
+    <div class='graph'>
+
+      <form method='post'>
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+          <input type="submit" class="submitButton" value="Login"></input>
+
+      </form>
+
+    </div>
+
+
+    {% if messages %}
+        {% for message in messages %}
+          <h2> {{message}} </h2>
+        {% endfor %}
+    {% endif %}
+  </article>
+{% endblock %}

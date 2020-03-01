@@ -4,6 +4,7 @@ from .forms import TextEquation
 from .traph import grapher, file_numberer    # The functions that will graph the equation and tell us the number
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def calculator(request):
@@ -23,7 +24,7 @@ def calculator(request):
         else:
             image_number += 1                             # As the graph doesn't exist, the alt message of <img> will appear
 
-    else:
+    else:                                                 # Defualt settings
         form = TextEquation()
         equation = 'null'
         image_number = 3
@@ -49,3 +50,7 @@ def register(request):
         register_form = UserCreationForm()
 
     return render(request, 'calculator/register.html', {'register_form': register_form})
+
+@login_required
+def profile(request):
+    return render(request, 'calculator/profile.html')

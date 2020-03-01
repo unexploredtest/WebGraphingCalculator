@@ -2,61 +2,57 @@
 
 {% block content %}
 
-    <div class="CalculatorBase">
-
-      <article>
-        {% if messages %}
-          {% for message in messages %}
-            <h2> {{message}} </h2>
-          {% endfor %}
-        {% endif %}
-        <h1>This shall be an amazing calculator</h1>
-        <form method='post'>
-          {% csrf_token %}
-          {{ form }}
-          <!-- <p> {{ equation }} </p> -->  <!-- Used to see if the form worked or not -->
-          <input type="submit" class="submitButton" value="Calculate"></input>
-        </form>
+    <article>
+      {% if messages %}
+        {% for message in messages %}
+          <h2> {{message}} </h2>
+        {% endfor %}
+      {% endif %}
+      <h1>Graph your function here</h1>
+      <form method='post'>
+        {% csrf_token %}
+        {{ form }}
+        <!-- <p> {{ equation }} </p> -->  <!-- Used to see if the form worked or not -->
+        <input type="submit" class="submitButton" value="Graph"></input>
+      </form>
 
 
 
 
-         <br>
-        <button onclick="Add('7')">7</button>
-        <button onclick="Add('8')">8</button>
-        <button onclick="Add('9')">9</button>
-        <button onclick="Add('/')">/</button>
-        <button onclick="Clear()">C</button> <br>
-        <button onclick="Add('4')">4</button>
-        <button onclick="Add('5')">5</button>
-        <button onclick="Add('6')">6</button>
-        <button onclick="Add('*')">*</button>
-        <button onclick="Add('(')">(</button> <br>
-        <button onclick="Add('1')">1</button>
-        <button onclick="Add('2')">2</button>
-        <button onclick="Add('3')">3</button>
-        <button onclick="Add('-')">-</button>
-        <button onclick="Add(')')">)</button> <br>
-        <button onclick="Add('0')">0</button>
-        <button onclick="Add('sqrt(')">sqrt</button>
-        <button onclick="Add('x')">x</button>
-        <button onclick="Add('+')">+</button>
-        <button onclick="Add('.')">.</button>
+       <br>
+      <button onclick="Add('7')">7</button>
+      <button onclick="Add('8')">8</button>
+      <button onclick="Add('9')">9</button>
+      <button onclick="Add('/')">/</button>
+      <button onclick="Clear()">C</button> <br>
+      <button onclick="Add('4')">4</button>
+      <button onclick="Add('5')">5</button>
+      <button onclick="Add('6')">6</button>
+      <button onclick="Add('*')">*</button>
+      <button onclick="Add('(')">(</button> <br>
+      <button onclick="Add('1')">1</button>
+      <button onclick="Add('2')">2</button>
+      <button onclick="Add('3')">3</button>
+      <button onclick="Add('-')">-</button>
+      <button onclick="Add(')')">)</button> <br>
+      <button onclick="Add('0')">0</button>
+      <button onclick="Add('sqrt(')">sqrt</button>
+      <button onclick="Add('x')">x</button>
+      <button onclick="Add('+')">+</button>
+      <button onclick="Add('.')">.</button>
 
 
-      </article>
+    </article>
 
-      <div class="graph">
+    <div class="graph">
 
-        <div id="visualization">
+      <div id="visualization">
 
-          <img src='/static/calculator/graphs/graph{{ image_number }}.png' alt='Please put a valid function'>
-
-        </div>
-        <p id="functionDisplay"></p>
-
+        <img src='/static/calculator/graphs/graph{{ image_number }}.png' alt='Please put a valid function'>
 
       </div>
+      <p id="functionDisplay"></p>
+
 
     </div>
 

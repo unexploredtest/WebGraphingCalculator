@@ -28,26 +28,38 @@
           <br />
           <input type="submit" value="Login">
           <input type="button" onclick="loginPage('c')" value="Back">
-          <a href="{% url 'register' %}'>" Register </a>
+          <a href='{% url 'register' %}'> Register </a>
         </form>
       </section>
     </div>
     <header>
       <section>
         <h1>.Calculator</h1>
-        <button onclick="loginPage('o')">Login</button>
-        <a href="{% url 'register' %}"> Register </a>
+        <button onclick="window.location.href = {% url 'GraphingCalculator' %}">Home</button>
+        {% if user.is_authenticated %}
+          <button onclick="window.location.href = {% url 'logout' %}">Logout</button>
+          <button onclick="window.location.href = {% url 'profile' %}">Profile</button> &nbsp
+          Welcome {{ user.username }}!
+        {% else %}
+          <button onclick="window.location.href = {% url 'login' %}">Login</button>
+          <button onclick="window.location.href = {% url 'register' %}">Register</button>
+        {% endif %}
       </section>
     </header>
+
+    <div class="CalculatorBase">
 
       {% block content %}
 
       {% endblock %}
 
+    </div>
+
     <footer>
       <address>
-        Creators: <p><a style='color: rgb(220, 220, 220);' href="https://github.com/aliPMPAINT">aliPMPAINT </a></p>
-                  <p><a style='color: rgb(220, 220, 220);' href="https://github.com/Jan00sh">Jan00sh</a></p>
+        Creators: <p><a style='color: rgb(220, 220, 220);' href="https://github.com/aliPMPAINT">aliPMPAINT </a></p> &nbsp
+                  <p><a style='color: rgb(220, 220, 220);' href="https://github.com/Jan00sh">Jan00sh</a></p>  &nbsp
+                  <p><a style='color: rgb(220, 220, 220);' href="#">squid</a></p>
       </address>
     </footer>
   </body>

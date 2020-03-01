@@ -13,8 +13,10 @@ def plot_it(equation):                                           # ploting the f
     plt.style.use('seaborn')
 
     plt.cla()
+
     x = linspace(0, 5, 100)
     y = eval(equation)
+
     plt.plot(x, y)
     plt.axhline(y=0, color='black')
     plt.axvline(x=0, color='black')
@@ -35,6 +37,6 @@ def graph_it(equation):
 
     file_number += 1                     # Increasing the number for the fututre image
 
-    with open('file_numberer.py', 'w') as numberer:                       # Saving the future number
+    with open('traph/file_numberer.py', 'w') as numberer:                       # Saving the future number
         text = f"def get_number():\n    number = {file_number}\n    return number"
         numberer.write(text)
