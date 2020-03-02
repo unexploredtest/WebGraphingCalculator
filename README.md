@@ -14,3 +14,7 @@ In the `/Website` directory, type in the terminal:
 
 ## Made by:
 [Jan00sh](https://github.com/Jan00sh) and [aliPMPAINT](https://github.com/aliPMPAINT)
+
+## A temporary website:
+http://3.134.76.101:8080/
+Thanks to squid
