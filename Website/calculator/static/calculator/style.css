@@ -15,7 +15,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
 }
 
 body {
@@ -69,6 +69,12 @@ header button:hover{
 .CalculatorBase article h1{
   color: #F28705;
   margin-bottom: 20px;
+}
+
+#graph_alienation {
+
+display: in-line;
+
 }
 
 article button {

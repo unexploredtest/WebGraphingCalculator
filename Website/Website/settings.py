@@ -122,6 +122,9 @@ STATIC_PATH = os.path.join(BASE_DIR,'static')
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR+'/calculator', 'media')
+MEDIA_URL = '/media/'
+
 STATICFILES_DIRS = (
     STATIC_PATH,
 )

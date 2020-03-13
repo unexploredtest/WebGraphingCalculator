@@ -3,8 +3,10 @@ from django.contrib.auth.models import User
 
 class Graph(models.Model):
 
-    equation = models.CharField(max_length=30, primary_key=True)
-    description = models.TextField()
-    image = models.ImageField(upload_to='graphs/')
+    name = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='calculator/saved_graphs/')
 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name

@@ -2,5 +2,15 @@
 
 {% block content %}
 
-  <p style="color: red; text-align: center;"> The graphs that {{user.username}} has saved </p>
+  <h1 style="color: red; display: block; "> The history of {{user.username}} graphs </h1>
+  <div id="graph_alienation">
+
+    {% for graph_url in graphs_url %}
+
+      <img src={{ graph_url.image.url }} alt='Please put a valid function' height=300 width=450>
+
+    {% endfor %}
+
+  </div>
+
 {% endblock %}

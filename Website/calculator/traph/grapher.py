@@ -7,7 +7,7 @@ path = getcwd()
 chdir(path+'//calculator//traph')
 # file_number = file_numberer.get_number() the current image number
 
-def plot_it(equation):                                           # ploting the function using matplotlib
+def plot_it(equation, user_authentication):                                           # ploting the function using matplotlib
     file_number = file_numberer.get_number()
 
     plt.style.use('seaborn')
@@ -23,17 +23,21 @@ def plot_it(equation):                                           # ploting the f
     plt.ylabel("y")
     plt.xlabel("x")
     plt.title(equation)
-    file_name = f'static/calculator/graphs/graph{file_number}.png'
+    if user_authentication:
+        file_name = f'media/calculator/saved_graphs/graph{file_number}.png'
+    else:
+        file_name = f'static/calculator/graphs/graph{file_number}.png'
     plt.savefig(file_name)
 
 
-def graph_it(equation):
+
+def graph_it(equation, user_authentication):
     file_number = file_numberer.get_number()
 
     chdir(path+'//calculator')                   # Changing the placement
 
 
-    plot_it(equation)                    # making and saving the graph
+    plot_it(equation, user_authentication)                    # making and saving the graph
 
     file_number += 1                     # Increasing the number for the fututre image
 
