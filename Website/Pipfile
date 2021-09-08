@@ -9,7 +9,7 @@ verify_ssl = true
 numpy = "==1.18.2"
 django = "==3.0.12"
 matplotlib = "==3.2.1"
-pillow = "==7.1.1"
+pillow = "==8.3.2"
 
 [requires]
 python_version = "3.8"
