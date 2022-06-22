@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-numpy = "==1.18.2"
+numpy = "==1.22.0"
 django = "==3.0.12"
 matplotlib = "==3.2.1"
 pillow = "==7.1.1"
